@@ -8,6 +8,7 @@ from langchain_community.document_loaders import SitemapLoader
 load_dotenv()
 
 SPREADSHEET_PATH = os.getenv("SPREADSHEET_PATH")
+FIRECRAWL_API_KEY = os.getenv("FIRECRAWL_API_KEY")
 
 def load_file(filename: str):
     df = pd.read_csv(filename)
@@ -33,7 +34,7 @@ def sitemap_loader(url: str):
 
 def scrape_website(url: str):
     firecrawl_reader = FireCrawlWebReader(
-        api_key="fc-7be55bc318be4ac799740f811e0a8fcb",
+        api_key=FIRECRAWL_API_KEY,
         mode="scrape"
     )
 
