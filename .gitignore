@@ -1,3 +1,4 @@
 .env
 spreadsheets
 poetry.lock
+.vscode
