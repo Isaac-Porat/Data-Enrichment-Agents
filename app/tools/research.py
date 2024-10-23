@@ -28,9 +28,7 @@ def scrape_website(url: str):
         for url in search_urls:
             firecrawl_reader = FireCrawlWebReader(
                 api_key=FIRECRAWL_API_KEY,
-                mode="scrape",
-                max=3
-            )
+                mode="scrape"            )
 
             documents = firecrawl_reader.load_data(url=url)
 
