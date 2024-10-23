@@ -1,0 +1,14 @@
+{
+    "name": "scrape_website",
+    "description": "Scrape a website using its sitemap and FireCrawl Web Reader",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "url": {
+                "type": "string",
+                "description": "The URL of the website to scrape"
+            }
+        },
+        "required": ["url"]
+    }
+}

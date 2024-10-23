@@ -1,0 +1,25 @@
+{
+    "name": "write_column",
+    "description": "Write values to a specific column in the CSV file",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "value": {
+                "description": "The value(s) to write to the column. Can be a single value or a list of values."
+            },
+            "column_name": {
+                "type": "string",
+                "description": "The name of the column to write to"
+            },
+            "row": {
+                "description": "The row(s) to write to. Can be an integer, list, range, pandas Series, or None",
+                "oneOf": [
+                    {"type": "integer"},
+                    {"type": "array"},
+                    {"type": "null"}
+                ]
+            }
+        },
+        "required": ["value", "column_name"]
+    }
+}

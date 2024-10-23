@@ -1,0 +1,7 @@
+.env
+spreadsheets
+poetry.lock
+.vscode
+data
+__pycache__
+.DS_Store
